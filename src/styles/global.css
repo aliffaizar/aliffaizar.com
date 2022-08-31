@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply bg-gray-900 text-gray-400 text-lg font-fira box-border
+  }
+}
+
+@layer utilities{
+  a.active{
+    @apply text-cyan-600 font-semibold
+  }
+}

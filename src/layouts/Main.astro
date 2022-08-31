@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/navbar/Navbar.astro';
+import '@fontsource/exo-2';
+import '@fontsource/fira-code';
+import Footer from '../components/Footer.jsx';
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <BaseHead title={`Alif Faizar - ${title}`} description={description} />
+  </head>
+  <body>
+    <Navbar />
+    <main class='container mx-auto py-5 lg:py-7 space-y-3 lg:space-y-5'>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

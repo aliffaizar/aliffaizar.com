@@ -1,0 +1,16 @@
+---
+import Logo from "./Logo.astro";
+import MobileNav from "./MobileNav";
+import Nav from "./Nav.astro";
+
+---
+
+<div class="relative shadow shadow-gray-700 w-full">
+  <div class="mx-auto container flex flex-row justify-between items-center h-20">
+    <Logo/>
+    <div>
+      <Nav/>
+      <MobileNav client:load />
+    </div>
+  </div>
+</div>
