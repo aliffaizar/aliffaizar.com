@@ -1,10 +1,17 @@
 ---
-import Contact from "../components/home/Contact.astro";
-import Hero from "../components/home/Hero.astro";
-import Main from "../layouts/Main.astro";
+import Contact from '../components/home/Contact.astro';
+import Hero from '../components/home/Hero.astro';
+import Projects from '../components/home/Projects.astro';
+import Main from '../layouts/Main.astro';
 ---
 
-<Main title="personal website and portfolio" description="site for sharing my preject and blog i have written">
-	<Hero />
-	<Contact />
+<Main
+  title='personal website and portfolio'
+  description='site for sharing my preject and blog i have written'
+>
+  <Hero />
+  <div>
+    <Projects />
+  </div>
+  <Contact />
 </Main>

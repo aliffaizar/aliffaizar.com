@@ -58,7 +58,11 @@ import Main from '../layouts/Main.astro';
     <div
       class='col-span-4 lg:col-auto flex justify-center items-center lg:justify-start lg:items-start w-full'
     >
-      <img src='/images/avatar.jpg' class='rounded' />
+      <img
+        src='/images/me.jpg'
+        onerror={`this.src='/images/avatar.jpg'`}
+        class='rounded'
+      />
     </div>
   </div>
 </Main>

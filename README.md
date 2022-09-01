@@ -1,19 +1,11 @@
-# Astro Starter Kit: Blog
+# Personal Portfolio
 
-```
-npm init astro -- --template blog
-```
+this project build with Astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+> 🧑‍🚀 **Status:** incomplete
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features:
 
-
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
 - ✅ Sitemap support
@@ -22,14 +14,13 @@ Features:
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```
 ├── public/
 ├── src/
 │   ├── components/
 │   ├── layouts/
-│   └── pages/
+│   |── pages/
+│   └── styles/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
@@ -55,10 +46,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 👀 Want to learn more about Astro?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Check out [astro documentation](https://docs.astro.build) or jump into [Astro Discord server](https://astro.build/chat).
