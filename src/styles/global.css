@@ -15,6 +15,12 @@
   ::-webkit-scrollbar-thumb{
     @apply hover:bg-cyan-800 rounded bg-cyan-600
   }
+  #blogpost{
+    @apply prose md:prose-lg lg:prose-xl prose-invert prose-headings:text-gray-200 prose-p:text-gray-400 prose-code:text-gray-400 prose-a:text-cyan-600 
+  }
+  .prose > * {
+    @apply w-full
+  }
 }
 
 @layer utilities{

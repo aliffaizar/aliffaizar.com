@@ -7,6 +7,13 @@ module.exports = {
         exo: '"Exo 2", sans',
         fira: '"Fira Code", monospace',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: '120ch',
+          },
+        },
+      }),
     },
     container: {
       padding: {
@@ -21,5 +28,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms')({ strategy: 'class' }),
     require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
   ],
 };

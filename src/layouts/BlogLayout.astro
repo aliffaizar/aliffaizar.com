@@ -1,0 +1,43 @@
+---
+import Main from './Main.astro';
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage: string;
+  };
+}
+const {
+  content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<Main title={title} description={description}>
+  <article class='space-y-3 lg:space-y-5 w-full'>
+    <h1 class='text-3xl lg:text-5xl font-bold text-gray-200'>{title}</h1>
+    {
+      pubDate && (
+        <time class='text-sm lg:text-base'>
+          {new Date(pubDate).toLocaleDateString('id-id', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+          })}
+        </time>
+      )
+    }
+    {
+      updatedDate && (
+        <div>
+          Last updated on <time>{updatedDate}</time>
+        </div>
+      )
+    }
+    {heroImage && <img width={720} height={360} src={heroImage} alt='' />}
+    <div id='blogpost'>
+      <slot />
+    </div>
+  </article>
+</Main>

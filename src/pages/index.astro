@@ -1,4 +1,5 @@
 ---
+import BlogSection from '../components/home/BlogSection.astro';
 import Contact from '../components/home/Contact.astro';
 import Hero from '../components/home/Hero.astro';
 import Projects from '../components/home/Projects.astro';
@@ -10,8 +11,7 @@ import Main from '../layouts/Main.astro';
   description='site for sharing my preject and blog i have written'
 >
   <Hero />
-  <div>
-    <Projects />
-  </div>
+  <Projects />
+  <BlogSection />
   <Contact />
 </Main>
