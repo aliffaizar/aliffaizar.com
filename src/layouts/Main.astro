@@ -4,6 +4,7 @@ import Navbar from '../components/navbar/Navbar.astro';
 import '@fontsource/exo-2';
 import '@fontsource/fira-code';
 import Footer from '../components/Footer.jsx';
+import DevMode from '../components/DevMode.jsx';
 const { title, description } = Astro.props;
 ---
 
@@ -13,6 +14,7 @@ const { title, description } = Astro.props;
     <BaseHead title={`Alif Faizar - ${title}`} description={description} />
   </head>
   <body>
+    <DevMode />
     <Navbar />
     <main class='container mx-auto py-5 lg:py-7 space-y-5 lg:space-y-7'>
       <slot />
