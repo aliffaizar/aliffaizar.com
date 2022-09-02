@@ -1,4 +1,6 @@
-import { FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import GithubIcon from '../components/icons/GithubIcon';
+import TwitterIcon from '../components/icons/TwitterIcon';
+import MailIcon from '../components/icons/MailIcon';
 
 const Footer = () => {
   return (
@@ -19,21 +21,21 @@ const Footer = () => {
           className='hover:text-gray-200 hover:scale-110'
           target='_blank'
         >
-          <FaGithub className='w-6 h-6' />
+          <GithubIcon />
         </a>
         <a
           href='https://github.com/aliffaizar'
           className='hover:text-gray-200 hover:scale-110'
           target='_blank'
         >
-          <FaTwitter className='w-6 h-6' />
+          <TwitterIcon />
         </a>
         <a
           href='"mailto:hello@aliffaizar.com'
           className='hover:text-gray-200 hover:scale-110'
           target='_blank'
         >
-          <FaEnvelope className='w-6 h-6' />
+          <MailIcon />
         </a>
       </div>
     </footer>
