@@ -35,7 +35,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SECRETKEY }}
         port: ${{ secrets.PORT }}
-        fingerprint: ${{secrets.FINGERPRINT}}
         script: |
           cd aliffaizar.com
           git pull
