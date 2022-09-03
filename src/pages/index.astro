@@ -4,14 +4,14 @@ import Contact from '../components/home/Contact.astro';
 import Hero from '../components/home/Hero.astro';
 import Projects from '../components/home/Projects.astro';
 import Main from '../layouts/Main.astro';
-import { HOME } from '../config.mjs';
+import siteConfig from '../siteConfig.js';
 ---
 
 <Main
   title='personal website and portfolio'
   description='site for sharing my preject and blog i have written'
 >
-  <Hero home={HOME} />
+  <Hero home={siteConfig.HOME} />
   <Projects />
   <BlogSection />
   <Contact />
