@@ -33,7 +33,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.ECRETKEY }}
+        key: ${{ secrets.SECRETKEY }}
         port: ${{ secrets.PORT }}
         script: |
           cd aliffaizar.com
