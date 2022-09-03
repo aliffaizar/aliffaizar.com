@@ -36,6 +36,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd ${{secret.DIRNAME}}
+          cd aliffaizar.com
+          git pull
+          npm install
+          npm run build
         
       
