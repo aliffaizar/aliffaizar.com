@@ -1,4 +1,5 @@
 ---
+const { heroTitle, heroTagline } = Astro.props.home;
 ---
 
 <div
@@ -12,10 +13,10 @@
     />
   </div>
   <div class='w-8/12 md:w-6/12 text-center md:text-left'>
-    <h2 class='text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-200'>
-      Hi, I'm Alif
-    </h2>
-    <p class='text-2xl'>I'm web developer based in Tasikmalaya, Indonesia.</p>
+    <h1 class='text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-200'>
+      {heroTitle}
+    </h1>
+    <p class='text-2xl'>{heroTagline}</p>
   </div>
   <div class='w-8/12 h-full hidden md:flex items-center justify-end'>
     <img
