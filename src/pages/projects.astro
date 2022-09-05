@@ -1,8 +1,29 @@
 ---
-import Main from "../layouts/Main.astro";
-
-
+import Main from '../layouts/Main.astro';
 ---
-<Main title={'📋Projects'} descripton='personal project i have created'> 
-<h1>Hello This projects page</h1>
+
+<Main title={'📋Projects'} descripton='personal project i have created'>
+  <h1 class='text-3xl text-gray-200 font-semibold'>Projects</h1>
+  <div
+    class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-5 z-0'
+  >
+    <div class='items-center rounded-lg bg-gray-800 shadow p-5 space-y-5'>
+      <div class='aspect-h-3 aspect-w-4 z-0'>
+        <img
+          class='w-full h-full rounded-lg object-cover object-center'
+          src='/placeholder-hero.jpg'
+        />
+      </div>
+      <div>
+        <h3 class='text-xl font-bold tracking-tight text-gray-200'>
+          <a href='#'>Bonnie Green</a>
+        </h3>
+        <span class=''>CEO & Web Developer</span>
+        <p class='mt-3 mb-4 font-light line-clamp-3'>
+          Bonnie drives the technical strategy of the flowbite platform and
+          brand.
+        </p>
+      </div>
+    </div>
+  </div>
 </Main>
