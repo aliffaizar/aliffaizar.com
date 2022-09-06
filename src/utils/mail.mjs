@@ -1,46 +1,42 @@
 import nodemailer from 'nodemailer';
 
-const template = `<p className='text-base'>Hello, {name}.</p>
-      <p>Thank you for r</p>
-      <div className='w-full flex items-center justify-center fixed bottom-0'>
-        <div>
-          <img src='/images/me.jspg' alt='' />
-          <div>
-            <h1>Alif Faizar</h1>
-            <p>Web Developer</p>
-          </div>
-        </div>
-      </div>`;
-
-class Email {
-  constructor(form) {
-    (this.to = form.email),
-      (this.name = form.name),
-      (this.from = `Alif Faizar ${import.meta.env.MYEMAIL}`);
+export default class Email {
+  constructor(data) {
+    this.to = data.email;
+    this.from = import.meta.env.EMAIL_FROM;
+    this.message = data.message;
   }
-
-  newTransport() {
+  createTransport() {
+    if (import.meta.env.PROD) {
+      return nodemailer.createTransport({
+        host: import.meta.env.SMTP_HOST,
+        port: import.meta.env.SMTP_PORT,
+        secure: true,
+        auth: {
+          user: import.meta.env.SMTP_USER,
+          pass: import.meta.env.SMTP_PASS,
+        },
+      });
+    }
     return nodemailer.createTransport({
       host: import.meta.env.EMAIL_HOST,
       port: import.meta.env.EMAIL_PORT,
-      secure: true,
       auth: {
         user: import.meta.env.EMAIL_USER,
         pass: import.meta.env.EMAIL_PASS,
       },
     });
   }
-
-  async sendMail() {
-    const html = template;
-    const mailOptoin = {
+  async send(subject) {
+    const mailOptopn = {
       from: this.from,
       to: this.to,
-      subject: 'Thank You',
-      html,
+      subject,
+      text: 'This is fot testing',
     };
-    await this.newTransport.sendMail(mailOptoin);
+    await this.createTransport().sendMail(mailOptopn);
+  }
+  async sendThankYou() {
+    await this.send('Thank You');
   }
 }
-
-export default Email;

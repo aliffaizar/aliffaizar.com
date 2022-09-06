@@ -1,13 +1,31 @@
 import { useState } from 'react';
+import axios from 'axios';
+import LoadIcon from '../icons/LoadIcon';
 
-const Contact = () => {
+export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [sent, setSent] = useState(false);
   const handleChange = (e) => {
     setForm((val) => ({ ...val, [e.target.name]: e.target.value }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(form);
+    try {
+      setIsLoading(true);
+      await fetch('/sendMessage', {
+        method: 'POST',
+        body: JSON.stringify(form),
+      });
+      setIsLoading(false);
+      setSent(true);
+      setForm({ message: '', email: '', name: '' });
+    } catch (error) {
+      setIsError(true);
+      setIsLoading(false);
+      console.log(error.message);
+    }
   };
   return (
     <div
@@ -53,14 +71,23 @@ const Contact = () => {
             />
           </div>
           <div className=''>
-            <button className='float-right rounded bg-cyan-600 justify-center items-center text-gray-200 h-10 flex w-full md:w-40'>
-              Send
-            </button>
+            {!isLoading ? (
+              <button className='float-right rounded bg-cyan-600 justify-center items-center text-gray-200 h-10 flex w-full md:w-40'>
+                Send
+              </button>
+            ) : (
+              <button
+                disabled
+                className='float-right rounded bg-cyan-600 justify-center items-center text-gray-200 h-10 flex w-full md:w-40'
+              >
+                <span className=' motion-safe:animate-spin'>
+                  <LoadIcon width='20' height='20' />
+                </span>
+              </button>
+            )}
           </div>
         </form>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}
