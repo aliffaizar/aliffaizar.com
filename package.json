@@ -7,7 +7,7 @@
     "start": "node server/server.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "server": "nodemon server/server.mjs"
+    "server": "astro build && nodemon server/server.mjs"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.10.3",
