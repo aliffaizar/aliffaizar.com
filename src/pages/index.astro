@@ -1,6 +1,5 @@
 ---
 import BlogSection from '../components/home/BlogSection.astro';
-import Contact from '../components/home/Contact.jsx';
 import Hero from '../components/home/Hero.astro';
 import Projects from '../components/home/Projects.astro';
 import Main from '../layouts/Main.astro';
@@ -14,5 +13,4 @@ import siteConfig from '../siteConfig.js';
   <Hero home={siteConfig.HOME} />
   <Projects />
   <BlogSection />
-  <Contact client:load />
 </Main>

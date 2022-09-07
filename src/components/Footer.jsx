@@ -31,7 +31,7 @@ const Footer = () => {
           <TwitterIcon />
         </a>
         <a
-          href='"mailto:hello@aliffaizar.com'
+          href='mailto:hello@aliffaizar.com'
           className='hover:text-gray-200 hover:scale-110'
           target='_blank'
         >

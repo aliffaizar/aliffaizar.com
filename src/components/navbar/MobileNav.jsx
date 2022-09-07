@@ -43,12 +43,6 @@ const MobileNav = () => {
             >
               About Me
             </a>
-            <a
-              className='text-center hover:font-semibold py-1 bg-cyan-600 text-gray-200 hover:text-cyan-600 hover:bg-transparent hover:outline-cyan-600 rounded hover:outline'
-              href='/#contact'
-            >
-              Contact
-            </a>
           </div>
         </div>
       </Popover.Panel>
