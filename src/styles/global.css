@@ -27,4 +27,25 @@
   a.active{
     @apply text-cyan-600 font-semibold
   }
+  p#cyan{
+    @apply text-gray-200 px-2 rounded-sm bg-cyan-600
+  }
+  p#green{
+    @apply text-gray-200 px-2 rounded-sm bg-green-600
+  }
+  p#rose{
+    @apply text-gray-200 px-2 rounded-sm bg-rose-600
+  }
+  p#purple{
+    @apply text-gray-200 px-2 rounded-sm bg-purple-600
+  }
+  p#sky{
+    @apply text-gray-200 px-2 rounded-sm bg-sky-600
+  }
+  p#fuchsia{
+    @apply text-gray-200 px-2 rounded-sm bg-fuchsia-600
+  }
+  p#amber{
+    @apply text-gray-200 px-2 rounded-sm bg-amber-600
+  }
 }

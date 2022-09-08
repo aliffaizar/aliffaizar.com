@@ -16,7 +16,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           <div class='flex-shrink-0'>
             <img
               class='object-cover object-center w-32 h-32 lg:w-44 lg:h-44 rounded'
-              src={post.frontmatter.heroImage}
+              src={post.frontmatter.image}
             />
           </div>
           <div class='w-full space-y-2'>

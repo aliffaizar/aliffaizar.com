@@ -1,0 +1,23 @@
+---
+const { tags } = Astro.props;
+const colors = [
+  'cyan',
+  'green',
+  'purple',
+  'amber',
+  'sky',
+  'rose',
+  'fuchsia',
+  'cyan',
+  'green',
+  'purple',
+  'amber',
+  'sky',
+  'rose',
+  'fuchsia',
+];
+---
+
+<div class='flex space-x-3'>
+  {tags && tags.map((tag, index) => <p id={colors[index]}>{tag}</p>)}
+</div>

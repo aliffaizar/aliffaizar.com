@@ -1,16 +1,22 @@
 ---
 import BlogSection from '../components/home/BlogSection.astro';
 import Hero from '../components/home/Hero.astro';
-import Projects from '../components/home/Projects.astro';
+import Projects from '../components/home/Projects.jsx';
 import Main from '../layouts/Main.astro';
-import siteConfig from '../siteConfig.js';
+import { HOME } from '../siteConfig.js';
+const data = (await Astro.glob('./projects/*.{md,mdx}')).sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+const projects = data.length > 12 ? data.slice(0, 12) : data;
 ---
 
 <Main
   title='personal website and portfolio'
   description='site for sharing my preject and blog i have written'
 >
-  <Hero home={siteConfig.HOME} />
-  <Projects />
+  <Hero home={HOME} />
+  <Projects projects={projects} client:load />
   <BlogSection />
 </Main>
