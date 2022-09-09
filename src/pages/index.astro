@@ -3,7 +3,7 @@ import BlogSection from '../components/home/BlogSection.astro';
 import Hero from '../components/home/Hero.astro';
 import Projects from '../components/home/Projects.jsx';
 import Main from '../layouts/Main.astro';
-import { HOME } from '../siteConfig.js';
+import { HOME } from '../config.js';
 const data = (await Astro.glob('./projects/*.{md,mdx}')).sort(
   (a, b) =>
     new Date(b.frontmatter.date).valueOf() -

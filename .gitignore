@@ -20,4 +20,4 @@ pnpm-debug.log*
 
 # my asset
 public/images/me.jpg
-src/siteConfig.js
+src/config.js
