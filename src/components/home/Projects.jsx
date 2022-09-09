@@ -49,8 +49,8 @@ function Projects({ projects }) {
         }}
       >
         {projects.map((project) => (
-          <SwiperSlide className='p-1'>
-            <Card key={project.frontmatter.title} data={project} />
+          <SwiperSlide key={project.frontmatter.title} className='p-1'>
+            <Card data={project} />
           </SwiperSlide>
         ))}
       </Swiper>

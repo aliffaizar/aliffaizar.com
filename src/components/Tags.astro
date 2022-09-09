@@ -18,6 +18,13 @@ const colors = [
 ];
 ---
 
-<div class='flex space-x-3'>
-  {tags && tags.map((tag, index) => <p id={colors[index]}>{tag}</p>)}
+<div class='flex space-x-2'>
+  {
+    tags &&
+      tags.map((tag, index) => (
+        <p class='text-sm' id={colors[index]}>
+          {tag}
+        </p>
+      ))
+  }
 </div>
