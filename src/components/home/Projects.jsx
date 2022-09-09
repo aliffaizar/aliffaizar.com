@@ -42,9 +42,14 @@ function Projects({ projects }) {
           dynamicBullets: true,
         }}
         modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+        style={{
+          '--swiper-pagination-color': '#0891b2',
+          '--swiper-pagination-bullet-inactive-color': '#fff',
+          '--swiper-pagination-bullet-inactive-opacity': '.7',
+        }}
       >
         {projects.map((project) => (
-          <SwiperSlide>
+          <SwiperSlide className='p-1'>
             <Card key={project.frontmatter.title} data={project} />
           </SwiperSlide>
         ))}
