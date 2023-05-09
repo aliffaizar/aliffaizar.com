@@ -4,6 +4,6 @@
 
 @layer base{
   body{
-    @apply relative flex min-h-screen w-full justify-center bg-black font-sans lg:px-4 xl:px-8 text-gray-300 scroll-smooth;
+    @apply relative flex min-h-screen w-full justify-center bg-black font-sans text-gray-300 scroll-smooth;
   }
 }
