@@ -1,4 +1,4 @@
-import Typewriter from '../components/TypeWriter'
+import Typewriter from '../components/TypeWriter';
 
 export default function Hero() {
   return (
@@ -14,13 +14,13 @@ export default function Hero() {
           <Typewriter
             withIcon
             iconSize='3rem'
-            text='Frontend Developer'
+            text='Fullstack Developer'
             className='text-white  p-2 text-4xl md:text-5xl lg:text-7xl w-full'
           />
           <span className='w-full h-1 rounded bg-gradient-to-r from-rose-400 via-sky-500 to-cyan-500'></span>
         </div>
         <p className='text-lg text-center md:text-xl'>
-          my expertise lies in web development and I have a strong understanding
+          My expertise lies in web development and I have a strong understanding
           of both front-end and back-end technologies. I have a deep interest in
           technology and it drives me to constantly seeking opportunities to
           expand my knowledge and improve my skills.
@@ -36,5 +36,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

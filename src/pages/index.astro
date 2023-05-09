@@ -1,12 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Hero from '../sections/Hero'
-import Portfolio from '../sections/Portfolio'
+import Layout from '../layouts/Layout.astro';
+import About from '../sections/About';
+import Hero from '../sections/Hero';
+import Portfolio from '../sections/Portfolio';
 ---
 
 <Layout>
   <div class='min-h-full flex flex-col items-center justify-center w-full'>
     <Hero />
+    <About client:load />
     <Portfolio />
   </div>
 </Layout>

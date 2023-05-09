@@ -4,6 +4,9 @@
 
 @layer base{
   body{
-    @apply relative flex min-h-screen w-full justify-center bg-black font-sans text-gray-300 scroll-smooth;
+    @apply relative flex min-h-screen w-full justify-center bg-black font-sans text-gray-300 scroll-smooth scrollbar-thin scrollbar-thumb-cyan-900 scrollbar-track-zinc-800;
+  }
+  pre{
+    @apply scrollbar-thin scrollbar-thumb-cyan-900 scrollbar-track-zinc-900/50;
   }
 }
