@@ -1,51 +1,9 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
 
 @layer base{
   body{
-    @apply bg-gray-900 text-gray-400 text-lg font-fira box-border
-  }
-  ::-webkit-scrollbar{
-    @apply w-2
-  }
-  ::-webkit-scrollbar-track{
-    @apply bg-gray-800
-  }
-  ::-webkit-scrollbar-thumb{
-    @apply hover:bg-cyan-800 rounded bg-cyan-600
-  }
-  #blogpost{
-    @apply prose md:prose-lg lg:prose-xl prose-invert prose-headings:text-gray-200 prose-p:text-gray-400 prose-code:text-gray-400 prose-a:text-cyan-600 
-  }
-  .prose > * {
-    @apply w-full
-  }
-}
-
-@layer utilities{
-  a.active{
-    @apply text-cyan-600 font-semibold
-  }
-  span#cyan{
-    @apply text-gray-200 px-2 rounded-sm bg-cyan-600
-  }
-  span#green{
-    @apply text-gray-200 px-2 rounded-sm bg-green-600
-  }
-  span#rose{
-    @apply text-gray-200 px-2 rounded-sm bg-rose-600
-  }
-  span#purple{
-    @apply text-gray-200 px-2 rounded-sm bg-purple-600
-  }
-  span#sky{
-    @apply text-gray-200 px-2 rounded-sm bg-sky-600
-  }
-  span#fuchsia{
-    @apply text-gray-200 px-2 rounded-sm bg-fuchsia-600
-  }
-  span#amber{
-    @apply text-gray-200 px-2 rounded-sm bg-amber-600
+    @apply relative flex min-h-screen w-full justify-center bg-black font-sans lg:px-4 xl:px-8 text-gray-300 scroll-smooth;
   }
 }

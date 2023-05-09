@@ -1,0 +1,122 @@
+import { Popover } from '@headlessui/react'
+import {
+  BriefcaseIcon,
+  ChevronDownIcon,
+  EllipsisHorizontalIcon,
+  EnvelopeIcon,
+  HomeIcon,
+  UserIcon,
+} from '@heroicons/react/24/solid'
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
+
+export default function MobileNav() {
+  return (
+    <>
+      <Popover
+        as='div'
+        className='fixed bottom-0 w-full bg-zinc-800 block md:hidden text-gray-300'
+      >
+        {({ open }) => (
+          <>
+            <Popover.Overlay className='fixed inset-0 bg-black/60 -z-10' />
+            <Popover.Panel className='bg-zinc-900/50 pb-4'>
+              <Popover.Button className=' w-full flex items-center justify-center pt-4'>
+                <ChevronDownIcon className='w-8 h-8' />
+              </Popover.Button>
+              <div className='grid grid-cols-4'>
+                <a
+                  href='/#home'
+                  className='flex h-20 items-center justify-center w-full '
+                >
+                  <HomeIcon className='w-8 h-8 group-hover:scale-125' />
+                </a>
+                <a
+                  href='/#about'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <UserIcon className='w-8 h-8 group-hover:scale-125' />
+                </a>
+                <a
+                  href='/#portfolio'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
+                </a>
+                <a
+                  href='/#contact'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
+                </a>
+                <a
+                  href='/'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <span className='h-8 w-8'>
+                    <GithubIcon />
+                  </span>
+                </a>
+                <a
+                  href='/'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <span className='h-8 w-8'>
+                    <LinkedInIcon />
+                  </span>
+                </a>
+                <a
+                  href='/'
+                  className='flex h-20 items-center justify-center w-full'
+                >
+                  <span className='h-8 w-8'>
+                    <TwitterIcon />
+                  </span>
+                </a>
+              </div>
+            </Popover.Panel>
+            {!open && (
+              <div className='flex bg-zinc-900/50 items-center w-full'>
+                <a
+                  href='/#home'
+                  className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
+                >
+                  <HomeIcon className='w-8 h-8 group-hover:scale-125' />
+                  <span>home</span>
+                </a>
+                <a
+                  href='/#about'
+                  className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
+                >
+                  <UserIcon className='w-8 h-8 group-hover:scale-125' />
+                  <span>about</span>
+                </a>
+                <a
+                  href='/#portfolio'
+                  className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
+                >
+                  <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
+                  <span>portfolio</span>
+                </a>
+                <a
+                  href='/#contact'
+                  className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
+                >
+                  <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
+                  <span>contact</span>
+                </a>
+
+                <Popover.Button
+                  as='div'
+                  className='flex h-20 items-center justify-center w-full cursor-pointer'
+                >
+                  <EllipsisHorizontalIcon className='w-8 h-8 group-hover:scale-125' />
+                </Popover.Button>
+              </div>
+            )}
+          </>
+        )}
+      </Popover>
+      <div className='fixed bottom-0 w-full bg-zinc-800 block md:hidden text-gray-300'></div>
+    </>
+  )
+}

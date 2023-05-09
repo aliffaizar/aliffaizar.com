@@ -1,34 +1,21 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      fontFamily: {
-        exo: '"Exo 2", sans',
-        fira: '"Fira Code", monospace',
+      animation: {
+        blink: 'blinking 0.75s ease-in-out infinite',
+        typewriter: 'typing 2s steps(30, end)',
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            maxWidth: '120ch',
-          },
+      keyframes: {
+        blinking: {
+          '50%': { opacity: 0 },
         },
-      }),
-    },
-    container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        typing: {
+          '0%': { width: 0 },
+          '100%': { width: '100%' },
+        },
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms')({ strategy: 'class' }),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
+  plugins: [],
+}
