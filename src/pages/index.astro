@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import About from '../sections/About';
+import Contact from '../sections/Contact';
 import Hero from '../sections/Hero';
 import Portfolio from '../sections/Portfolio';
 ---
@@ -10,5 +11,6 @@ import Portfolio from '../sections/Portfolio';
     <Hero />
     <About client:load />
     <Portfolio />
+    <Contact client:load />
   </div>
 </Layout>
