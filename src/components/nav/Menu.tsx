@@ -3,9 +3,9 @@ import {
   EnvelopeIcon,
   HomeIcon,
   UserIcon,
-} from '@heroicons/react/24/solid'
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
-import MobileNav from './MobileNav'
+} from '@heroicons/react/24/solid';
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons';
+import MobileNav from './MobileNav';
 
 export default function Menu() {
   return (
@@ -21,7 +21,7 @@ export default function Menu() {
           </a>
 
           <a
-            href='/'
+            href='/#about'
             className='h-20 flex items-center group justify-center shadow-sm shadow-zinc-800 hover:text-cyan-500 flex-col'
           >
             <UserIcon className='w-8 h-8 group-hover:scale-110' />
@@ -35,7 +35,7 @@ export default function Menu() {
             <span className='text-xs group-hover:scale-110'>portfolio</span>
           </a>
           <a
-            href='/'
+            href='/#contact'
             className='h-20 flex items-center group justify-center shadow-sm shadow-zinc-800 hover:text-cyan-500 flex-col'
           >
             <EnvelopeIcon className='w-8 h-8 group-hover:scale-110' />
@@ -44,7 +44,8 @@ export default function Menu() {
         </div>
         <div>
           <a
-            href='/'
+            href='https://github.com/aliffaizar'
+            target='_blank'
             className='h-20 flex items-center group justify-center bg-cyan-950 hover:text-cyan-400 flex-col'
           >
             <span className='w-8 h-8 group-hover:scale-125'>
@@ -52,7 +53,8 @@ export default function Menu() {
             </span>
           </a>
           <a
-            href='/'
+            href='https://www.linkedin.com/in/aliffaizar/'
+            target='_blank'
             className='h-20 flex items-center group justify-center bg-cyan-950 hover:text-cyan-400 flex-col'
           >
             <span className='w-8 h-8 group-hover:scale-125'>
@@ -60,7 +62,8 @@ export default function Menu() {
             </span>
           </a>
           <a
-            href='/'
+            href='https://twitter.com/alif_faizar'
+            target='_blank'
             className='h-20 flex items-center group justify-center bg-cyan-950 hover:text-cyan-400 flex-col'
           >
             <span className='w-8 h-8 group-hover:scale-125'>
@@ -71,5 +74,5 @@ export default function Menu() {
       </div>
       <MobileNav />
     </>
-  )
+  );
 }

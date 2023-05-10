@@ -1,4 +1,4 @@
-import { Popover } from '@headlessui/react'
+import { Popover } from '@headlessui/react';
 import {
   BriefcaseIcon,
   ChevronDownIcon,
@@ -6,8 +6,8 @@ import {
   EnvelopeIcon,
   HomeIcon,
   UserIcon,
-} from '@heroicons/react/24/solid'
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
+} from '@heroicons/react/24/solid';
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons';
 
 export default function MobileNav() {
   return (
@@ -23,55 +23,60 @@ export default function MobileNav() {
               <Popover.Button className=' w-full flex items-center justify-center pt-4'>
                 <ChevronDownIcon className='w-8 h-8' />
               </Popover.Button>
-              <div className='grid grid-cols-4'>
-                <a
-                  href='/#home'
-                  className='flex h-20 items-center justify-center w-full '
-                >
-                  <HomeIcon className='w-8 h-8 group-hover:scale-125' />
-                </a>
-                <a
-                  href='/#about'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <UserIcon className='w-8 h-8 group-hover:scale-125' />
-                </a>
-                <a
-                  href='/#portfolio'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
-                </a>
-                <a
-                  href='/#contact'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
-                </a>
-                <a
-                  href='/'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <span className='h-8 w-8'>
-                    <GithubIcon />
-                  </span>
-                </a>
-                <a
-                  href='/'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <span className='h-8 w-8'>
-                    <LinkedInIcon />
-                  </span>
-                </a>
-                <a
-                  href='/'
-                  className='flex h-20 items-center justify-center w-full'
-                >
-                  <span className='h-8 w-8'>
-                    <TwitterIcon />
-                  </span>
-                </a>
+              <div className='px-8 py-4'>
+                <div className='grid grid-cols-5 gap-4'>
+                  <a
+                    href='/#home'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <HomeIcon className='w-8 h-8 group-hover:scale-125' />
+                  </a>
+                  <a
+                    href='/#about'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <UserIcon className='w-8 h-8 group-hover:scale-125' />
+                  </a>
+                  <a
+                    href='/#portfolio'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
+                  </a>
+                  <a
+                    href='/#contact'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
+                  </a>
+                  <a
+                    href='https://github.com/aliffaizar'
+                    target='_blank'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <span className='h-8 w-8'>
+                      <GithubIcon />
+                    </span>
+                  </a>
+                  <a
+                    href='https://www.linkedin.com/in/aliffaizar/'
+                    target='_blank'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <span className='h-8 w-8'>
+                      <LinkedInIcon />
+                    </span>
+                  </a>
+                  <a
+                    href='https://twitter.com/alif_faizar'
+                    target='_blank'
+                    className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
+                  >
+                    <span className='h-8 w-8'>
+                      <TwitterIcon />
+                    </span>
+                  </a>
+                </div>
               </div>
             </Popover.Panel>
             {!open && (
@@ -118,5 +123,5 @@ export default function MobileNav() {
       </Popover>
       <div className='fixed bottom-0 w-full bg-zinc-800 block md:hidden text-gray-300'></div>
     </>
-  )
+  );
 }
