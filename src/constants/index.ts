@@ -69,13 +69,36 @@ export const ABOUT = `const profile = {
   phone: '+6285221989686',
 };
 
+const skills = [{
+  backend: ['Express', 'NodeJS', 'NestJS', 'MySQL', 'MongoDB'],
+  frontend: ['React', 'NextJS', 'Vite', 'Astro'],
+  languages: ['JavaScript', 'TypeScript'],
+  tools: ['Git', 'Docker'],
+}];
+
 const experience = [
-  { company: 'Evetech Solution', position: 'Frontend Developer', year: 'sept 2022 - apr 2023' },
+  { 
+    company: 'Evetech Solution', 
+    position: 'Frontend Developer', 
+    year: 'sept 2022 - apr 2023',
+  },
 ];
 
 const education = [
-  { bootcamp: 'Jabar Codingcamp', major: 'JavaScript Frontend Developer', year: '2021' },
-  { course: 'Udemy', major: 'NodeJs, Express and MongoDB', year: '2022' },
-  { course: 'Udemy', major: 'Javascriprt Algorithm and Data Structures', year: '2022 - present' },
+  { 
+    bootcamp: 'Jabar Codingcamp', 
+    major: 'JavaScript Frontend Developer', 
+    year: '2021',
+  },
+  { 
+    course: 'Udemy', 
+    major: 'NodeJs, Express and MongoDB',
+    year: '2022',
+  },
+  { 
+    course: 'Udemy',
+    major: 'Javascriprt Algorithm and Data Structures',
+    year: '2022 - present',
+  },
 ];
 `;

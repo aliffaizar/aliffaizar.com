@@ -52,14 +52,13 @@ export function LinkedInIcon() {
   );
 }
 
-export function CevronRight({ iconSize = '2rem' }: { iconSize?: string }) {
+export function CevronRight() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 24 24'
       fill='currentColor'
-      width={iconSize}
-      height={iconSize}
+      preserveAspectRatio='xMidYMid'
     >
       <path
         fillRule='evenodd'
