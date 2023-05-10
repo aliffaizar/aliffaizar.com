@@ -1,4 +1,5 @@
-import { Popover } from '@headlessui/react';
+'use client'
+import { Popover } from '@headlessui/react'
 import {
   BriefcaseIcon,
   ChevronDownIcon,
@@ -6,10 +7,14 @@ import {
   EnvelopeIcon,
   HomeIcon,
   UserIcon,
-} from '@heroicons/react/24/solid';
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons';
+} from '@heroicons/react/24/solid'
+import { GithubIcon, LinkedInIcon, TwitterIcon } from '../Icons'
 
-export default function MobileNav() {
+export default function MobileNav({
+  scrollTo,
+}: {
+  scrollTo: (id: string) => void
+}) {
   return (
     <>
       <Popover
@@ -25,30 +30,30 @@ export default function MobileNav() {
               </Popover.Button>
               <div className='px-8 py-4'>
                 <div className='grid grid-cols-5 gap-4'>
-                  <a
-                    href='/#home'
+                  <button
+                    onClick={() => scrollTo('home')}
                     className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
                   >
                     <HomeIcon className='w-8 h-8 group-hover:scale-125' />
-                  </a>
-                  <a
-                    href='/#about'
+                  </button>
+                  <button
+                    onClick={() => scrollTo('about')}
                     className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
                   >
                     <UserIcon className='w-8 h-8 group-hover:scale-125' />
-                  </a>
-                  <a
-                    href='/#portfolio'
+                  </button>
+                  <button
+                    onClick={() => scrollTo('portfolio')}
                     className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
                   >
                     <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
-                  </a>
-                  <a
-                    href='/#contact'
+                  </button>
+                  <button
+                    onClick={() => scrollTo('contact')}
                     className='flex aspect-square rounded-md flex-col items-center justify-center w-full bg-zinc-800'
                   >
                     <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
-                  </a>
+                  </button>
                   <a
                     href='https://github.com/aliffaizar'
                     target='_blank'
@@ -81,34 +86,34 @@ export default function MobileNav() {
             </Popover.Panel>
             {!open && (
               <div className='flex bg-zinc-900/50 items-center w-full'>
-                <a
-                  href='/#home'
+                <button
+                  onClick={() => scrollTo('home')}
                   className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
                 >
                   <HomeIcon className='w-8 h-8 group-hover:scale-125' />
                   <span>home</span>
-                </a>
-                <a
-                  href='/#about'
+                </button>
+                <button
+                  onClick={() => scrollTo('about')}
                   className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
                 >
                   <UserIcon className='w-8 h-8 group-hover:scale-125' />
                   <span>about</span>
-                </a>
-                <a
-                  href='/#portfolio'
+                </button>
+                <button
+                  onClick={() => scrollTo('portfolio')}
                   className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
                 >
                   <BriefcaseIcon className='w-8 h-8 group-hover:scale-125' />
                   <span>portfolio</span>
-                </a>
-                <a
-                  href='/#contact'
+                </button>
+                <button
+                  onClick={() => scrollTo('contact')}
                   className='flex h-20 items-center justify-center w-full flex-col border-r border-zinc-800'
                 >
                   <EnvelopeIcon className='w-8 h-8 group-hover:scale-125' />
                   <span>contact</span>
-                </a>
+                </button>
 
                 <Popover.Button
                   as='div'
@@ -123,5 +128,5 @@ export default function MobileNav() {
       </Popover>
       <div className='fixed bottom-0 w-full bg-zinc-800 block md:hidden text-gray-300'></div>
     </>
-  );
+  )
 }

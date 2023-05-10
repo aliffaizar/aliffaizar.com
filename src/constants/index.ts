@@ -59,7 +59,7 @@ export const SKILLS = [
     name: 'Swagger',
     logo: 'swagger.svg',
   },
-];
+]
 
 export const ABOUT = `const profile = {
   name: 'Alif Faizar',
@@ -68,13 +68,6 @@ export const ABOUT = `const profile = {
   email: 'aliffaizar21@gmail.com',
   phone: '+6285221989686',
 };
-
-const skills = [{
-  backend: ['Express', 'NodeJS', 'NestJS', 'MySQL', 'MongoDB'],
-  frontend: ['React', 'NextJS', 'Vite', 'Astro'],
-  languages: ['JavaScript', 'TypeScript'],
-  tools: ['Git', 'Docker'],
-}];
 
 const experience = [
   { 
@@ -101,4 +94,22 @@ const education = [
     year: '2022 - present',
   },
 ];
-`;
+`
+
+export const PROJECTS = [
+  {
+    name: 'Booking App',
+    tech: ['Turborepo', 'NestJs', 'NextJs', 'MongoDB', 'Vite'],
+    githubUrl: 'https://github.com/aliffaizar/booking-app',
+  },
+  {
+    name: 'Todo API',
+    tech: ['NestJs', 'Mysql', 'Docker'],
+    githubUrl: 'https://github.com/aliffaizar/devcode-nodejs',
+  },
+  {
+    name: 'Portfolio',
+    tech: ['NextJs', 'TailwindCSS'],
+    githubUrl: 'https://github.com/aliffaizar/aliffaizar.com',
+  },
+]

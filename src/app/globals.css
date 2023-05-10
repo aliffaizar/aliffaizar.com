@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body {
+      @apply bg-black text-zinc-300
+  }
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 bg-zinc-900
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan-900
+  }
+
+}

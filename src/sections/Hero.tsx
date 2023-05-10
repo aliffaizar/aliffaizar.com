@@ -1,4 +1,4 @@
-import Typewriter from '../components/TypeWriter';
+import Typewriter from '@/components/TypeWriter'
 
 export default function Hero() {
   return (
@@ -21,15 +21,15 @@ export default function Hero() {
           expand my knowledge and improve my skills.
         </p>
         <div className='relative mt-4'>
-          <div className='bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 w-64 h-12'></div>
+          <div className='bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 w-44 h-8 md:w-52 md:h-10 lg:w-64 lg:h-12'></div>
           <a
             href=''
-            className='w-64 h-12 bg-white text-gray-900 font-mono text-xl flex items-center justify-center absolute right-2 bottom-2 hover:right-0 hover:bottom-0'
+            className='w-44 h-8 md:w-52 md:h-10 lg:w-64 lg:h-12 bg-white text-gray-900 font-mono text-sm md:text-base lg:text-lg font-bold lg:font-semibold flex items-center justify-center absolute right-1 bottom-1 lg:right-2 lg:bottom-2 hover:right-0 hover:bottom-0'
           >
             Download CV
           </a>
         </div>
       </div>
     </section>
-  );
+  )
 }
