@@ -1,8 +1,15 @@
 'use client'
+import dynamic from 'next/dynamic'
 import { Prism } from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
+import SkillsSkeleton from '@/components/SkillsSkeleton'
 import { ABOUT } from '../constants'
-import Skills from '@/components/Skills'
+
+const Skills = dynamic(() => import('@/components/Skills'), {
+  loading: () => <SkillsSkeleton />,
+  ssr: false,
+})
 
 export default function About() {
   return (

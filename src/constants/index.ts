@@ -113,3 +113,9 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/aliffaizar/aliffaizar.com',
   },
 ]
+
+export const META = {
+  title: 'Alif Faizar',
+  description:
+    'Alif faizar is a full-stack web developer with expertise in web development. Alif faizar has a strong understanding of both front-end and back-end technologies. Technology has always fascinated him, and it drives him to constantly learn and seek opportunities to expand his knowledge and improve his skills.',
+}

@@ -11,6 +11,7 @@ export default function PortfolioCard(project: IProject) {
       >
         <div className='space-y-4'>
           <div className='aspect-w-3 aspect-h-2'>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className='rounded-t-lg object-cover shadow-lg'
               src='/images/placeholder.jpg'
