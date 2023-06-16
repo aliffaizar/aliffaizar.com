@@ -4,8 +4,8 @@ import { PROJECTS } from '@/constants'
 export interface IProject {
   name: string
   tech: string[]
-  imageUrl?: string
-  url?: string
+  imageUrl: string
+  url: string
   githubUrl: string
 }
 

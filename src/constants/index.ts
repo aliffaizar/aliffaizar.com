@@ -98,19 +98,25 @@ const education = [
 
 export const PROJECTS = [
   {
-    name: 'Booking App',
-    tech: ['Turborepo', 'NestJs', 'NextJs', 'MongoDB', 'Vite'],
-    githubUrl: 'https://github.com/aliffaizar/booking-app',
+    name: 'Dummy Code',
+    tech: ['Turborepo', 'NestJs', 'MySql', 'Vite'],
+    githubUrl: 'https://github.com/aliffaizar/dummy-code',
+    url: 'https://dummy-code.aliffaizar.com/',
+    imageUrl: '/images/dummy-code.png',
   },
   {
-    name: 'Todo API',
-    tech: ['NestJs', 'Mysql', 'Docker'],
-    githubUrl: 'https://github.com/aliffaizar/devcode-nodejs',
+    name: 'Books Store REST API',
+    tech: ['NestJs', 'Mysql', 'Swagger'],
+    githubUrl: 'https://github.com/aliffaizar/bookstore',
+    url: 'https://bookstore-production-bfa2.up.railway.app/',
+    imageUrl: '/images/rest-api.png',
   },
   {
-    name: 'Portfolio',
-    tech: ['NextJs', 'TailwindCSS'],
-    githubUrl: 'https://github.com/aliffaizar/aliffaizar.com',
+    name: 'xpess-cli',
+    tech: ['Nodejs', 'npm'],
+    githubUrl: 'https://github.com/aliffaizar/xpress-cli',
+    url: 'https://www.npmjs.com/package/xpress-cli',
+    imageUrl: '/images/xpress-cli.png',
   },
 ]
 
