@@ -1,6 +1,8 @@
 import Menu from '@/components/nav/Menu'
-import './globals.css'
 import { Inter } from 'next/font/google'
+
+import './globals.css'
+import 'md-editor-rt/lib/preview.css'
 
 import { META } from '@/constants'
 
@@ -24,7 +26,7 @@ export default function RootLayout({
           <div className='fixed top-0 left-0 z-50 hidden w-full bg-black md:block lg:h-4 xl:h-8'></div>
           <div className='relative w-full max-w-screen-xl'>
             <div className='relative h-full bg-zinc-800'>
-              <div className='h-full w-full px-4 md:px-6 lg:px-8 pb-28 md:pb-16'>
+              <div className='h-full w-full px-4 md:px-6 lg:px-8'>
                 {children}
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { IProject } from '@/sections/Portfolio'
+import { IProject } from '@/components/sections/Portfolio'
 
 export default function PortfolioCard(project: IProject) {
   return (
