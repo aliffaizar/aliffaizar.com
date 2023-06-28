@@ -2,15 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
   body {
-      @apply bg-black text-zinc-300
-  }
-  ::-webkit-scrollbar {
-    @apply w-2 h-2 bg-zinc-900
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-cyan-900
+    @apply bg-black text-zinc-300;
   }
 
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 bg-zinc-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan-900;
+  }
+}
+
+@layer components {
+  #preview-only {
+    @apply bg-zinc-800 !important;
+  }
+
+  #preview-only pre {
+    @apply bg-zinc-900 !important;
+  }
+
+  #preview-only-preview-wrapper {
+    @apply p-0 mt-8 !important;
+  }
 }

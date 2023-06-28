@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "no-console": "warn",
+    "@next/next/no-img-element": "off"
+  }
 }

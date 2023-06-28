@@ -13,7 +13,7 @@ export function GithubIcon() {
         ></path>
       </g>
     </svg>
-  );
+  )
 }
 
 export function TwitterIcon() {
@@ -31,7 +31,7 @@ export function TwitterIcon() {
         ></path>
       </g>
     </svg>
-  );
+  )
 }
 
 export function LinkedInIcon() {
@@ -49,7 +49,7 @@ export function LinkedInIcon() {
         ></path>
       </g>
     </svg>
-  );
+  )
 }
 
 export function CevronRight() {
@@ -66,5 +66,5 @@ export function CevronRight() {
         clipRule='evenodd'
       />
     </svg>
-  );
+  )
 }

@@ -4,7 +4,7 @@ import { Prism } from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import SkillsSkeleton from '@/components/SkillsSkeleton'
-import { ABOUT } from '../constants'
+import { ABOUT } from '@/constants'
 
 const Skills = dynamic(() => import('@/components/Skills'), {
   loading: () => <SkillsSkeleton />,
